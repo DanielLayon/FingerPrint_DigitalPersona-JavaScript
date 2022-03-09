@@ -1,0 +1,281 @@
+/* IMPORTING FONTS */
+@font-face {
+    font-family: Boricua;
+    src: url("../fonts/Boricua.ttf");
+}
+
+@font-face {
+    font-family: OrangeJuice;
+    src: url("../fonts/orange\ juice\ 2.0.ttf");
+}
+
+@font-face {
+    font-family: RichardSamuels;
+    src: url("../fonts/Richard\ Samuels.otf");
+}
+
+/* DINAMIC SIZES */
+:root{
+    --menu-logo-height:90%;
+    --menu-tittle-fontSize:250%;
+    --menu-item-fontSize:130%;
+    --menu-index-fontSize:100%;
+}
+
+
+/* Smaller than standard 960 (devices and browsers) */
+@media only screen and (max-width: 959px) {
+    :root{
+        --menu-logo-height:90%;
+        --menu-tittle-fontSize:250%;
+        --menu-item-fontSize:130%;
+        --menu-index-fontSize:100%;
+    }
+}
+
+/* Tablet Portrait size to standard 960 (devices and browsers) */
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+    :root{
+        --menu-logo-height:70%;
+        --menu-tittle-fontSize:200%;
+        --menu-item-fontSize:100%;
+        --menu-index-fontSize:100%;
+    }
+}
+
+/* All Mobile Sizes (devices and browser) */
+@media only screen and (max-width: 767px) {
+    :root{
+        --menu-logo-height:50%;
+        --menu-tittle-fontSize:150%;
+        --menu-item-fontSize:100%;
+        --menu-index-fontSize:80%;
+    }
+}
+
+/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+    :root{
+        --menu-logo-height:50%;
+        --menu-tittle-fontSize:100%;
+        --menu-item-fontSize:80%;
+        --menu-index-fontSize:60%;
+    }
+}
+
+/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+@media only screen and (max-width: 479px) {
+    :root{
+        --menu-logo-height:30%;
+        --menu-tittle-fontSize:100%;
+        --menu-item-fontSize:60%;
+        --menu-index-fontSize:60%;
+    }
+}
+
+body{
+    overflow-y: scroll;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    width: 100vw;
+    height: 100vh;
+}
+
+/* MENU */
+.container-menu{
+    width: 100%;
+    height: 10%;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #304D63;
+}
+
+.menu-logo{
+    width: 4.5%;
+    height: var(--menu-logo-height);
+    cursor: pointer;
+    margin-left: 1%;
+    margin-right: 1%;
+    border-radius: 100%;
+    background-image: url("../img/logo.png");
+    background-color: #ffffff;
+    background-size: 80%;  
+    background-position:center;  
+    background-repeat: no-repeat;
+}
+
+.menu-title{
+    margin-right: 5%;
+    font-size: var(--menu-tittle-fontSize);
+    font-family: OrangeJuice;
+    color: white;
+}
+
+.menu-items{
+    width: 30%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.menu-item{
+    width: 28%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    text-align: center;
+    font-family: Boricua;
+    font-size: var(--menu-item-fontSize);
+    cursor: pointer;
+    background-color: #F2D096;
+    box-shadow: 0px 0px 3px black;
+    transform: scale(1.0);
+    transition: all 500ms;
+}
+
+.menu-item:hover{
+    transform: scale(1.05);
+    transition: all 500ms;
+}
+
+.menu-tree{
+    width: 44%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    
+}
+
+.menu-index-fix{
+    margin-right: 2%;
+    cursor: pointer;
+    font-size: var(--menu-index-fontSize);
+    font-family: Boricua;
+    color: #F2D096;
+}
+
+.menu-index-dinamic{
+    margin-right: 2%;
+    cursor: pointer;
+    font-size: var(--menu-index-fontSize);
+    font-family: Boricua;
+    color: #F2D096;
+}
+
+.content{
+    width: 100%;
+    height: 90%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* MAIN PAGE */
+/* POST */
+
+.blog{
+    width: 97%;
+    height: 100%;
+    border-left: solid 1px black;
+    border-right: solid 1px black;
+}
+
+.post{
+    padding: 10px 0px 10px 5px;
+}
+
+.post-owner{
+    display: flex;
+    align-items: center;
+    margin-bottom: 1%;
+
+}
+.post-owner-photo-border{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3%;
+    border-radius: 100%;
+    margin-right: 1%;
+    background-color: #304D63;
+    transition: all 2s;
+}
+.post-owner-photo-border:hover{
+    background-color: #F2D096;
+    transition: all 2s;
+}
+.post-owner-photo{
+    width: 80%;
+    height: auto;
+    padding: 10%;
+    border-radius: 100%;
+}
+.post-owner-name{
+    font-size: 15px;
+    font-family: RichardSamuels;
+    color: #4b4b4b;
+}
+
+.post-owner-content{
+    width: 96%;
+    padding-top: 1%;
+    padding-left: 3%;
+    padding-bottom: 1%;
+    background-color: #d6d6d6;
+    border-radius: 10px
+    
+}
+.post-title{
+    font-family: RichardSamuels;
+    font-size: 40px;
+    margin-bottom: 1%;
+}
+.post-content{
+    width: 100%;
+    display: flex;
+    font-family: RichardSamuels;
+}
+
+.post-content-left{
+    width: 48%;
+    text-align: left;
+    margin-right: 4%;
+}
+
+.post-content-right{
+    width: 48%;
+    text-align: left;
+}
+
+/* IMAGE SETS */
+
+.status{
+    text-align:center;
+    font-family: Boricua;
+    font-size:6vh;
+    font-weight: 500;
+    color:rgb(35, 35, 209);
+}
+
+.image-div{
+    display: flex;
+    justify-content: center;
+}
+
+.image-data{
+    width: 30vh;
+    height: 40vh;
+}
